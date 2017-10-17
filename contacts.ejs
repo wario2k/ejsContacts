@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head><title>Contacts Table</title>
+ <style type="text/css">
+        table,th,tr,td {
+            border: 1px solid black;
+
+
+            }
+            </style>
+</head>
+<body>
+<table>
+<caption>List Of Contacts</caption>
+<thead> <tr>
+<th>Salutation</th>
+<th>First Name </th>
+<th>Last Name</th>
+<th>Street</th>
+<th>City </th>
+<th>State</th>
+<th>Zip</th>
+<th>Phone Number</th>
+<th>Email</th>
+<th>Contact Methods</th>
+</tr></thead>
+
+<tbody>
+<%for (param in contact) {%>
+
+<tr>
+	<%var temp_param = contact[param]%>
+		<%for(i = 0; i < temp_param.length; i++){%>
+		<td>
+			<%=temp_param[i]%>
+		</td>
+		<%} %>
+</tr>
+<%}%>
+</tbody>
+
+</table>
+
+</body>
+</html>

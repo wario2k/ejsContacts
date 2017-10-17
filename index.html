@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Info Form</title>
+  <style type="text/css">
+        table {
+            border: 1px solid black;
+            padding-right: 125px;
+            padding-top: 10px;
+            padding-bottom: 10px;        
+          }
+</style>
+
+</head>
+<body>
+<table>
+  <tr><td>
+<form action = "/mailer" name = 'contact_info' method="POST">
+	<input type="radio" name="honorific" value="Mr." checked> Mr.
+ 	<input type="radio" name="honorific" value="Mrs."> Mrs.
+  	<input type="radio" name="honorific" value="Ms."> Ms.
+  	<input type="radio" name="honorific" value="Dr."> Dr. <br>
+
+	<!--required attribute makes firstname and last name input mandatory!-->
+  First name 	:	<input type="text" name="first_name" required> <br>
+  Last name 	: 	<input type="text" name="last_name" required><br>
+  Street 		:	<input type = "text" name = "street">
+  City 			:	<input type = "text" name = "city"><br>
+  State <select name = 'state' id = 'state'>
+  <option value="NJ"  checked>NJ</option>
+  <option value="NY">NY</option>
+  <option value="PA">PA</option>
+  <option value="CT">CT</option>
+</select>
+  Zip 	:	<input type = "text" name = "zip"><br>
+  Phone :	<input type = "text" name = "ph"><br>
+  Email :	<input type = "text" name = "email"><br>
+
+  How may we contact you? <input type = "checkbox" name="contact_method" value="ph">Phone
+  <input type = "checkbox" name="contact_method" value="mail">Mail
+  <input type = "checkbox" name="contact_method" value="email">Email
+  <input type = "checkbox" name="contact_method" value="any" checked>Any<br>
+  <input type="submit" value="Send me spam forever!">
+</form>
+</td></tr>
+</table>
+<p>
+  <br><br>
+<a href = "/contacts"> Contact list</a>
+<p>
+</body>
+</html>
